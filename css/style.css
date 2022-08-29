@@ -1,0 +1,101 @@
+.nav{
+   padding: 1 rem; 
+}
+.nav__lista {
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav__enlace {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.linea{
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    
+    color: rgba(243, 245, 249, 0.792);}
+    
+
+.main{
+    padding: 2rem;
+    font-family: sans-serif;
+    background-color: rgb(93, 90, 90);
+}
+
+.fondo{
+    text-align: center;
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-parrilla-cerca-parrilla-fuego-barbacoa-aislado-sobre-fondo-negro_1150-37783.jpg?w=996&t=st=1661738122~exp=1661738722~hmac=d6e58e5d326b4260868ef1ff2c61975b4ee28dc58f8365625cc5939053104ab5);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    padding: 2rem;
+}
+.col{
+    padding: 0.5rem;
+}
+footer {
+    color: rgba(255, 255, 255, 0.577);
+   padding: 1rem;
+  
+    
+}
+
+.contact-info {
+    margin-top: 10px;
+    padding-left: 0;
+    
+  }
+  
+  .contact-icon {
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+  
+  .contact-link {
+    list-style: none;
+    text-decoration:none ;
+    color: rgba(255, 255, 255, 0.577);
+  }
+  
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+    
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+   
+    
+}
+
+.contact-item {
+    position: relative;
+    padding-left: 30px;
+    list-style: none;
+   
+    
+}
+.page-header, .category-header, .section-video-home, .instafeed-title, .section-featured-home, .section-brands-home, .nube-slider-product, .social-share, .product-description, .contact-item, .element-footer {
+    margin-bottom: 20px;
+   
+}
+
+
+
+

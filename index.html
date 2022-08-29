@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titabé - Catalogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header claas="header">
+        <div class="container-fluid bg-dark">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-4 col-lg-3 text-center text-md-left">
+                    <a class="header__marca" href="./inicio.html">
+                        <img class="header__logo" src="./img/logo (2).png" alt="titabe" width="150" height="">
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-3 text-center text-md-right ">
+                    <nav class="nav">
+                        <ul class="list-group list-group-numbered nav__lista ">
+                            <li class="nav__item">
+                                <a class="nav__enlace" href="./pages/inicio.html">Inicio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__enlace" href="./index.html"> Catalogo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__enlace" href="./pages/somos.html">Somos</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="main">
+        <h1 class="linea">Nuestos Productos Parrilleros</h1>
+
+        <div class="container">
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row"></main>
+                <!-- Carrito -->
+                <aside class="col-sm-4">
+                    <img src="/img/icons8-comprar-50.png" alt="">
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: $ <span id="total"></span></p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                    <button id="boton-comprar" class="btn btn-success">Comprar</button>
+
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-dark px-md-5">
+        <div class="row element-footer">
+
+            <div class="col-md mb-4">
+                <h5 class="h5">Titabe</h5>
+                <p>La ideología Titabe consiste en brindar la solución a cada uno de los asadores, siempre priorizando y
+                    atendiendo la necesidad específica de cada cliente. Compartimos la misma pasión de cada argentino,
+                    comer Asado.</p>
+            </div>
+
+            <div class="col-md mb-4">
+                <h5 class="h5">Contactanos</h5>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <a href="https://wa.me/5493513624366" class="contact-link"><img src="./img/whatsapp.png"
+                                alt="whatsapp" title="">5493513624366</a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="tel:+5493513624366" class="contact-link"><img src="./img/telefono.png"
+                                alt="telefono">+5493513624366</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-md mb-4">
+                <h5 class="h5">Sigamos Conectados</h5>
+                <a href="https://www.instagram.com/titabe.cba/?hl=es"><img src="./img/instagram.png"
+                        alt="instagram"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+
+</html>
