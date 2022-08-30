@@ -11,52 +11,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const baseDeDatos = [];
   const miLocalStorage = window.localStorage;
 
+//Aplicando fetch//
+function renderizarProductos() {
+  fetch('./js/fogoneros.json')
+    .then((response) => response.json())
+    .then((json) =>
+      json.forEach((json) => {
+        // Estructura
+        const miNodo = document.createElement('div');
+        miNodo.classList.add('card', 'col-sm-4');
+        miNodo.style.backgroundColor = 'rgb(75, 74, 74)';
+        // Body
+        const miNodoCardBody = document.createElement('div');
+        miNodoCardBody.classList.add('card-body');
 
+        // Titulo
+        const miNodoTitle = document.createElement('h5');
+        miNodoTitle.classList.add('card-title');
+        miNodoTitle.textContent = json.nombre;
+        // Imagen
+        const miNodoImagen = document.createElement('img');
+        miNodoImagen.classList.add('img-fluid', 'rounded');
+        miNodoImagen.setAttribute('src', json.imagen);
+        // Precio
+        const miNodoPrecio = document.createElement('p');
+        miNodoPrecio.classList.add('card-text');
+        miNodoPrecio.textContent = `${pesos}${json.precio}`;
+        // Boton
+        const miNodoBoton = document.createElement('button');
+        miNodoBoton.classList.add('btn', 'btn-primary');
+        miNodoBoton.textContent = '+';
+        miNodoBoton.setAttribute('marcador', json.id);
+        miNodoBoton.addEventListener('click', addProductoAlCarrito);
+        // Insertamos
+        miNodoCardBody.appendChild(miNodoImagen);
+        miNodoCardBody.appendChild(miNodoTitle);
+        miNodoCardBody.appendChild(miNodoPrecio);
+        miNodoCardBody.appendChild(miNodoBoton);
+        miNodo.appendChild(miNodoCardBody);
+        DOMitems.appendChild(miNodo);
+        baseDeDatos.push(json);
+      })
+    )
+    .then(() => {
+      renderizarCarrito();
+    });
+}
 
-  //Aplicando fetch//
-  function renderizarProductos() {
-    fetch("./js/fogoneros.json")
-      .then(response => response.json())
-      .then(json =>
-        json.forEach(json => {
-
-          // Estructura
-          const miNodo = document.createElement('div');
-          miNodo.classList.add('card', 'col-sm-4',);
-          miNodo.style.backgroundColor = "rgb(75, 74, 74)"
-          // Body
-          const miNodoCardBody = document.createElement('div');
-          miNodoCardBody.classList.add('card-body');
-
-          // Titulo
-          const miNodoTitle = document.createElement('h5');
-          miNodoTitle.classList.add('card-title');
-          miNodoTitle.textContent = json.nombre;
-          // Imagen
-          const miNodoImagen = document.createElement('img');
-          miNodoImagen.classList.add('img-fluid', 'rounded');
-          miNodoImagen.setAttribute('src', json.imagen);
-          // Precio
-          const miNodoPrecio = document.createElement('p');
-          miNodoPrecio.classList.add('card-text');
-          miNodoPrecio.textContent = `${pesos}${json.precio}`;
-          // Boton 
-          const miNodoBoton = document.createElement('button');
-          miNodoBoton.classList.add('btn', 'btn-primary');
-          miNodoBoton.textContent = 'Agregar';
-          miNodoBoton.setAttribute('marcador', json.id);
-          miNodoBoton.addEventListener('click', addProductoAlCarrito);
-          // Insertamos
-          miNodoCardBody.appendChild(miNodoImagen);
-          miNodoCardBody.appendChild(miNodoTitle);
-          miNodoCardBody.appendChild(miNodoPrecio);
-          miNodoCardBody.appendChild(miNodoBoton);
-          miNodo.appendChild(miNodoCardBody);
-          DOMitems.appendChild(miNodo);
-          baseDeDatos.push(json);
-        }));
-  }
-
+  
   function addProductoAlCarrito(evento) {
     const Toast = Swal.mixin({
       toast: true,
