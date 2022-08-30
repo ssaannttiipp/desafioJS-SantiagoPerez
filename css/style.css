@@ -1,3 +1,18 @@
+.header__logo{
+    padding: 20px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+
+.card-body > button{
+    width: 50%;
+}
+
 .nav{
    padding: 1 rem; 
 }
@@ -11,13 +26,17 @@
     text-decoration: none;
 }
 
+.img-fluid{
+    width: 250px;
+    height: 250px;
+}
 
 .linea{
     text-decoration: underline;
     text-align: center;
     color: white;
-    padding: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .container{

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   // Variables
   let carrito = [];
   const pesos = '$';
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const DOMbotonComprar = document.querySelector('#boton-comprar');
   const baseDeDatos = [];
   const miLocalStorage = window.localStorage;
-  
+
 
 
   //Aplicando fetch//
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Boton 
           const miNodoBoton = document.createElement('button');
           miNodoBoton.classList.add('btn', 'btn-primary');
-          miNodoBoton.textContent = '+';
+          miNodoBoton.textContent = 'Agregar';
           miNodoBoton.setAttribute('marcador', json.id);
           miNodoBoton.addEventListener('click', addProductoAlCarrito);
           // Insertamos
@@ -75,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     carrito.push(evento.target.getAttribute('marcador'))
-
     renderizarCarrito();
     guardarCarritoEnLocalStorage();
   }
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   DOMbotonComprar.addEventListener('click', comprarCarrito);
 
-  
+
   function vaciarCarrito() {
     const Toast = Swal.mixin({
       toast: true,
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       carrito = JSON.parse(miLocalStorage.getItem('carrito'));
     }
   }
- 
+
 
   DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
