@@ -53,9 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
           miNodo.appendChild(miNodoCardBody);
           DOMitems.appendChild(miNodo);
           baseDeDatos.push(json);
-
-
-
         }));
   }
 
@@ -147,10 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 0).toFixed(2);
   }
 
+  // Agregue un alert al boton de Comprar para que tenga una funciion// 
   function comprarCarrito() {
     Swal.fire(
-      'Disculpe',
-      'Su compra no ha sido valida.',
+      'Disculpe!',
+      'Su compra no pudo completarse, intente en otro momento.',
       'question'
     )
   }
@@ -196,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
-  
+
   cargarCarritoDeLocalStorage();
   renderizarProductos();
   renderizarCarrito();
