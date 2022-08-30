@@ -11,7 +11,7 @@
         "id": 2,
         "nombre": "Discos",
         "precio": 15700,
-        "imagen": "./img/Discos.jpg"
+        "imagen": "./img/discos.jpg"
     },
     {
         "id": 3,
